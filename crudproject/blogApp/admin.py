@@ -8,5 +8,5 @@ admin.site.register(Category)
 class PostAdmin(admin.site.ModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     list_filter = ('status')
-    search_filters = ['title', 'content']
+    search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
